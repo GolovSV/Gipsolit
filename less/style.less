@@ -70,6 +70,33 @@ transition: all 0.2S ;
 }
 }
 
+// оформление форм 
+.form{
+     &-input{
+      display: block;
+      margin: 2rem 0;
+      width: 100%;
+      border:1px solid @border-input;
+      border-radius: 5px;
+      padding: 1.7rem;
+     } 
+  &-btn{
+    display: block;
+    height: 5rem;
+    width: 100%;
+    font-size: 1.6em;
+  }
+
+      label{
+        font-size: 1.3rem;
+      position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 0.5rem;
+        background-color: @light;
+        text-align: center;
+      }
+}
 //Типографика
 section{
   padding: 10rem 0;
@@ -96,7 +123,7 @@ body{
 //Main//
 .main{
   padding:3rem 0;
-  background: #000 url(../media/main-bg.jpg)  center no-repeat;
+  background: #fff url(../media/main-bg.jpg)  center no-repeat;
   &-content{
     margin-top: 14rem;
     //главный Заголовок//
@@ -139,6 +166,7 @@ body{
     padding:3rem 4rem;
     background-color: @light;
     text-align: center;
+
       // Заголовок формы
       &-header{
         font-size: 1.7rem;
@@ -147,24 +175,11 @@ body{
         }
          }
          // поле для ввода
-   &-input{
-    display: block;
-    margin: 2rem 0;
-    width: 100%;
-    border:1px solid @border-input;
-    border-radius: 5px;
-    padding: 1.7rem;
-   }  
+ 
    //    подписи к полям ПОМОГИТЕ   
 
      //подпись под кнопкой
 // кнопка отправить заявку
-&-btn{
-  display: block;
-  height: 5rem;
-  width: 100%;
-  font-size: 1.6em;
-}
   }
  }
 .header {
@@ -181,15 +196,6 @@ body{
 .ops{
   text-align: right;
 }
-    label{
-      font-size: 1.3rem;
-    position: absolute;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      padding: 0.5rem;
-      background-color: @light;
-      text-align: center;
-    } 
      small{
       display: block;
       margin-top: 1.5rem;
@@ -204,8 +210,32 @@ padding: 1rem 2rem 2rem;
 }
 // Секция с отзывами
 .feedback{
+  position:relative;
  background: url(../media/отзывы/bg.jpg) no-repeat center;
  background-size:cover;
+ &-btn{
+  max-width:30rem;
+  margin:auto;
+ }
+&-form-gg{
+  text-align: center;
+  padding:4rem 8rem;
+  margin-top: 5rem;
+  width: 821px;
+  height: 250px;
+  background-color: @light;
+
+  h3{
+    font-size: 2.2rem;
+    .bold();
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 1rem;
+  }
+  label{
+    transform: translate(-50%, 5px);
+  }
+}
  &-prev-btn{
   left: -4rem;
  }
@@ -258,6 +288,12 @@ padding: 1rem 2rem 2rem;
   }
  }
 }
+.hand{
+  position:absolute;
+  bottom:0;
+  left: 0;
+  max-width: 40rem;
+}
 // оформление окон
 .popup{
 	display: none;
@@ -300,7 +336,79 @@ padding: 1rem 2rem 2rem;
 	.bold();
 }
 }
+// СХЕМА
+.scheme{
+  background:#fff url(../media/СХЕМА/6.png) bottom right -10rem no-repeat;
+  background-size:65rem;
+h3{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+p{
+  margin-bottom: 3rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+}
 // МЕДИА 
+@media(max-width: 1199){
+  .feedback{
+  &-form-gg{
+    padding:3rem 5rem;
+  }
+  .fotorama{
+    margin-bottom: 3rem;
+  }
+  }
+
+}
+@media(max-width: 767px){
+  .main{
+    background-position:top left;
+  }
+  .header{
+    text-align: center;
+  }
+  .wrap-block{
+    text-align: center;
+  }
+  .features{
+    &-block{
+      p{
+        width: 60%;
+      }
+    }
+  }
+  .feedback{
+    &-prev-btn{
+     left: 0;
+    }
+    &-next-btn{
+     right: 0;
+    }
+  }
+  .scheme{
+    background:none;
+    text-align: center;
+    min-height:20rem;
+  }
+}
+.circle{
+  &-border{
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    border:2px solid @icons-color;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 4rem;
+  }
+}
+
 @media(max-width: 414px){
 .main-bg{
 	margin-top: 7.5rem;
@@ -339,6 +447,16 @@ background-position: top left;
 }
 .main-title{
   text-align: center;
+}
+.feedback{
+ &-form{
+  label{
+    transform: translate(-50%, -50%);
+  }
+ }
+ .hand{
+  display:none;
+ }
 }
 }
 // оформление сеции с преимуществами 
@@ -387,7 +505,6 @@ img{
 .next{
   right: 0;
    background: url(../media/rig.png) center no-repeat;
-
 }
 // секция с ценами
 

@@ -38,6 +38,29 @@ textarea:focus {
   cursor: pointer;
   background-color: #e2a002;
 }
+.form-input {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 1.7rem;
+}
+.form-btn {
+  display: block;
+  height: 5rem;
+  width: 100%;
+  font-size: 1.6em;
+}
+.form label {
+  font-size: 1.3rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 0.5rem;
+  background-color: #ffffff;
+  text-align: center;
+}
 section {
   padding: 10rem 0;
 }
@@ -61,7 +84,7 @@ body {
 }
 .main {
   padding: 3rem 0;
-  background: #000000 url(../media/main-bg.jpg) center no-repeat;
+  background: #ffffff url(../media/main-bg.jpg) center no-repeat;
 }
 .main-content {
   margin-top: 14rem;
@@ -108,20 +131,6 @@ body {
 .main-form-header strong {
   font-size: 1.8rem;
 }
-.main-form-input {
-  display: block;
-  margin: 2rem 0;
-  width: 100%;
-  border: 1px solid #dddddd;
-  border-radius: 5px;
-  padding: 1.7rem;
-}
-.main-form-btn {
-  display: block;
-  height: 5rem;
-  width: 100%;
-  font-size: 1.6em;
-}
 .header {
   height: 7rem;
 }
@@ -136,15 +145,6 @@ body {
 .ops {
   text-align: right;
 }
-label {
-  font-size: 1.3rem;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  padding: 0.5rem;
-  background-color: #ffffff;
-  text-align: center;
-}
 small {
   display: block;
   margin-top: 1.5rem;
@@ -158,8 +158,31 @@ small {
   padding: 1rem 2rem 2rem;
 }
 .feedback {
+  position: relative;
   background: url(../media/отзывы/bg.jpg) no-repeat center;
   background-size: cover;
+}
+.feedback-btn {
+  max-width: 30rem;
+  margin: auto;
+}
+.feedback-form-gg {
+  text-align: center;
+  padding: 4rem 8rem;
+  margin-top: 5rem;
+  width: 821px;
+  height: 250px;
+  background-color: #ffffff;
+}
+.feedback-form-gg h3 {
+  font-size: 2.2rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-weight: 700;
+  line-height: 18px;
+  margin-bottom: 1rem;
+}
+.feedback-form-gg label {
+  transform: translate(-50%, 5px);
 }
 .feedback-prev-btn {
   left: -4rem;
@@ -212,6 +235,12 @@ small {
 .feedback-slider-btn img {
   width: 50%;
 }
+.hand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 40rem;
+}
 .popup {
   display: none;
   position: fixed;
@@ -253,6 +282,65 @@ small {
 .popup-header {
   font-family: 'ProximaNova_bold', sans-serif;
 }
+.scheme {
+  background: #ffffff url(../media/СХЕМА/6.png) bottom right -10rem no-repeat;
+  background-size: 65rem;
+}
+.scheme h3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+.scheme p {
+  margin-bottom: 3rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+@media (max-width: 1199) {
+  .feedback-form-gg {
+    padding: 3rem 5rem;
+  }
+  .feedback .fotorama {
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .main {
+    background-position: top left;
+  }
+  .header {
+    text-align: center;
+  }
+  .wrap-block {
+    text-align: center;
+  }
+  .features-block p {
+    width: 60%;
+  }
+  .feedback-prev-btn {
+    left: 0;
+  }
+  .feedback-next-btn {
+    right: 0;
+  }
+  .scheme {
+    background: none;
+    text-align: center;
+    min-height: 20rem;
+  }
+}
+.circle-border {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #70c849;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4rem;
+}
 @media (max-width: 414px) {
   .main-bg {
     margin-top: 7.5rem;
@@ -287,6 +375,12 @@ small {
   }
   .main-title {
     text-align: center;
+  }
+  .feedback-form label {
+    transform: translate(-50%, -50%);
+  }
+  .feedback .hand {
+    display: none;
   }
 }
 .features-block {
